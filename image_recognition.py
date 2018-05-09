@@ -199,15 +199,7 @@ if __name__=='__main__':
   checkpoint='Model_CP.tflearn'
   run_id='Model_CP'
   filename='Face_identification.tflearn'
-  
-  #base_path='/home/jowe/Pictures/2018-04-faces/'
-  #subdirs=['Julius','Felix','Marie','Johannes','Other']
-  #N_classes=len(subdirs)
-  #directories=[os.path.join(base_path,subdir) for subdir in subdirs]
-  #label_names=subdirs
-	
-  #allX,ally=load_training_files(directories,size_img)
-  #ally=to_categorical(ally,N_classes)
+
   (X, Y), (X_test, Y_test) = cifar10.load_data()
   size_img=X.shape[1]
   N_classes=len(np.unique(Y))
